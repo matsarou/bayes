@@ -1,0 +1,16 @@
+from scipy.stats import norm, beta, binom
+from scipy.stats import gamma
+from scipy.stats import binocdf
+
+def likelihood_product(data, p, n, pmf):
+    if (p < 0 or p > 1):
+        return 0
+    else:
+        return pmf(data, p, n)
+
+def beta_pdf(p, a, b):
+    return beta(a, b).pdf(p)
+
+def gamma_pdf(p, a, b):
+    return beta(a, b).pdf(p)
+
